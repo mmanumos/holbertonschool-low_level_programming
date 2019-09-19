@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- *main - Prints according to condition
+ * main - Prints according to condition
  *
- *Return: Always 0
+ * Return: Always 0
  */
 int main(void)
 {
