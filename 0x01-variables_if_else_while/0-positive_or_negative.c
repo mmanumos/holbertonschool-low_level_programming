@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- *main - Prints if a number is positive or negative
- *@n: The number to be checked
+ *main - Prints according to condition
  *
  *Return: Always 0
  */
