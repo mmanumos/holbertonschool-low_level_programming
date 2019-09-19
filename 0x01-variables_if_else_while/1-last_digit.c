@@ -2,31 +2,35 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- *main - Prints last digint and verify
- *@n: The number to be checked
+ * main - Prints and verify last digint
+ * n: Random number
+ * s: last digit
  *
- *Description: Get last digit of the number with % 10 and verify @n for each condition
- *Return: Always 0
+ * Description: Get last digit of the number with % 10 and
+ * verify @s for each condition
+ * Return: Always 0
  */
 
 
 int main(void)
 {
 	int n;
+	int s;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (n > 5)
+	s = (n % 10);
+	if (s > 5)
 	{
-		printf("Last digit of %d is %d and is greater than 5\n", n, (n % 10));
+		printf("Last digit of %d is %d and is greater than 5\n", n, s);
 	}
-	if (n == 0)
+	else if (s == 0)
 	{
 		printf("%d and is 0\n", n);
 	}
-	if (n < 6 && n != 0)
+	else if (s < 6 && s != 0)
 	{
-		printf("Last digit of %d is %d and is less than 6 and not 0 \n", n, (n % 10));
+		printf("Last digit of %d is %d and is less than 6 and not 0 \n", n, s);
 	}
 
 	return (0);
