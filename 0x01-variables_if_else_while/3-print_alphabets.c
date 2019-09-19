@@ -4,7 +4,7 @@
  * main - Prints alphabet
  * letter: letter
  *
- * Description: Prints alphabet ascendently
+ * Description: Prints lowercase and uppercase alphabet
  * Return: Always 0
  */
 
@@ -16,7 +16,11 @@ int main(void)
 	for (letter = 'a'; letter <= 'z'; letter++)
 	{
 		putchar(letter);
-		if(letter == 'z')
+	}
+	for (letter = 'A'; letter <= 'Z'; letter++)
+	{
+		putchar(letter);
+		if (letter == 'Z')
 		{
 			putchar('\n');
 		}
