@@ -1,7 +1,8 @@
 #include "holberton.h"
 
 /**
- * print_alphabet_x10 - 10 times
+ * print_sign - print sign
+ * @n: variable
  *
  * Return: Always 0
  */
