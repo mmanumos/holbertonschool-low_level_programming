@@ -11,9 +11,11 @@ void jack_bauer(void)
 	int hr1;
 	int min;
 
-        for(hr1 = 0 ; hr1 <= 23; hr1++){
-		for(min = 0; min <= 59; min++){
-			_putchar((hr1 / 10 )+ '0');
+	for (hr1 = 0 ; hr1 <= 23; hr1++)
+	{
+		for (min = 0; min <= 59; min++)
+		{
+			_putchar((hr1 / 10) + '0');
 			_putchar((hr1 % 10) + '0');
 			_putchar(':');
 			_putchar((min / 10) + '0');
