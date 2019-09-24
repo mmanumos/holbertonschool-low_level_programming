@@ -1,13 +1,14 @@
 #include "holberton.h"
 
 /**
- * print_alphabet_x10 - 10 times
+ * _abs - absolute value
+ *@n: variable
  *
  * Return: Always 0
  */
 int _abs(int n)
 {
-       	if (n > 0)
+	if (n > 0)
 	{
 		return (n);
 	}
@@ -17,6 +18,6 @@ int _abs(int n)
 	}
 	else
 	{
-		return(n * -1);
+		return (n * -1);
 	}
 }
