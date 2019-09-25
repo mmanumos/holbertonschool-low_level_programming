@@ -16,11 +16,11 @@ int main(void)
 	{
 		if (num1 % 3 == 0)
 		{
-			sum += num1;
+			sum = sum + num1;
 		}
 		else if (num1 % 5 == 0)
 		{
-			sum += num1;
+			sum = sum + num1;
 		}
 	}
 	printf("%d\n'", sum);
