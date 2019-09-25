@@ -59,3 +59,23 @@ int add(int, int);
 #define _PRINT_TO_98_
 void print_to_98(int n);
 #endif
+
+#ifndef _PRINT_TIMES_TABLE_
+#define _PRINT_TIMES_TABLE_
+void print_times_table(int n);
+#endif
+
+#ifndef _MOD_RES_
+#define _MOD_RES_
+int mod_res(int res);
+#endif
+
+#ifndef _ADD_COMMA_
+#define _ADD_COMMA_
+void add_comma(int n, int num2);
+#endif
+
+#ifndef _ADD_SPACE_
+#define _ADD_SPACE_
+char add_space(int resul);
+#endif
