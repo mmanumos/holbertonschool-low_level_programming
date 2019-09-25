@@ -14,15 +14,11 @@ int main(void)
 
 	for (num1 = 0; num1 < 1024; num1++)
 	{
-		if (num1 % 3 == 0)
+		if ((num1 % 3 == 0) || (num1 % 5 == 0))
 		{
-			sum = sum + num1;
-		}
-		else if (num1 % 5 == 0)
-		{
-			sum = sum + num1;
+			sum += num1;
 		}
 	}
-	printf("%d\n'", sum);
+	printf("%d\n", sum);
 	return (0);
 }
