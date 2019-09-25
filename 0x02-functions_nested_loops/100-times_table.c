@@ -22,22 +22,31 @@ void print_times_table(int n)
 				resul = num1 * num2;
 				if (resul < 10)
 				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
+					if (num2 > 0)
+					{
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(' ');
+					}
 					_putchar(resul + '0');
 				}
 				else if (resul < 100)
 				{
-					_putchar(' ');
-					_putchar(' ');
+					if (num2 > 0)
+					{
+						_putchar(' ');
+						_putchar(' ');
+					}
 					_putchar((resul / 10) + '0');
 					_putchar((resul % 10) + '0');
 
 				}
 				else
 				{
-					_putchar(' ');
+					if (num2 > 0)
+					{
+						_putchar(' ');
+					}
 					_putchar((resul / 100) + '0');
 					_putchar(((resul / 10) % 10) + '0');
 					_putchar((resul % 10) + '0');
