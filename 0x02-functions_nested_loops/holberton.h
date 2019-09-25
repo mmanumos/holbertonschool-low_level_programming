@@ -77,5 +77,5 @@ void add_comma(int n, int num2);
 
 #ifndef _ADD_SPACE_
 #define _ADD_SPACE_
-char add_space(int resul);
+void add_space(int resul, int num2);
 #endif

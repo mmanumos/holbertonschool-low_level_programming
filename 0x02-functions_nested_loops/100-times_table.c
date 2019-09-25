@@ -22,31 +22,19 @@ void print_times_table(int n)
 				resul = num1 * num2;
 				if (resul < 10)
 				{
-					if (num2 > 0)
-					{
-						_putchar(' ');
-						_putchar(' ');
-						_putchar(' ');
-					}
+					add_space(resul, num2);
 					_putchar(resul + '0');
 				}
 				else if (resul < 100)
 				{
-					if (num2 > 0)
-					{
-						_putchar(' ');
-						_putchar(' ');
-					}
+					add_space(resul, num2);
 					_putchar((resul / 10) + '0');
 					_putchar((resul % 10) + '0');
 
 				}
 				else
 				{
-					if (num2 > 0)
-					{
-						_putchar(' ');
-					}
+					add_space(resul, num2);
 					_putchar((resul / 100) + '0');
 					_putchar(((resul / 10) % 10) + '0');
 					_putchar((resul % 10) + '0');
@@ -70,5 +58,33 @@ void add_comma(int n, int num2)
 	if (num2 <= (n - 1))
 	{
 		_putchar(',');
+	}
+}
+
+
+/**
+ * add_space - add space
+ * @resul: resul
+ * @num2: num2
+ */
+void add_space(int resul, int num2)
+{
+	if ((resul < 10) && (num2 > 0))
+	{
+		_putchar(' ');
+		_putchar(' ');
+		_putchar(' ');
+	}
+	else if ((resul < 100) && (num2 > 0))
+	{
+		_putchar(' ');
+		_putchar(' ');
+	}
+	else
+	{
+		if (num2 > 0)
+		{
+			_putchar(' ');
+		}
 	}
 }
