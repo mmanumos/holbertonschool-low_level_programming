@@ -14,7 +14,11 @@ int main(void)
 
 	for (num1 = 0; num1 < 1024; num1++)
 	{
-		if ((num1 % 3 == 0) || (num1 % 5 == 0))
+		if (num1 % 3 == 0)
+		{
+			sum += num1;
+		}
+		else if (num1 % 5 == 0)
 		{
 			sum += num1;
 		}
