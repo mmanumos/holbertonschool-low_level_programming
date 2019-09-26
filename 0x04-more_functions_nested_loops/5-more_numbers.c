@@ -9,34 +9,21 @@ void more_numbers(void)
 {
 	int number;
 	int number2;
+	int res1;
+	int res2;
 
 	for (number = 0; number <= 10; number++)
 	{
 		for (number2 = 0; number2 <= 14; number2++)
 		{
-			if (number2 > 9)
+			res1 = (number2 / 10);
+			res2 = (number2 % 10);
+			if (res1 > 0)
 			{
-				_putchar((number2 / 10) + '0');
-				_putchar((number2 % 10) + '0');
+				_putchar(res1 + '0');
 			}
-			else
-			{
-				_putchar(number2 + '0');
-			}
+			_putchar(res2 + '0');
 		}
-		add_line();
+		_putchar('\n');
 	}
-	add_line();
-}
-
-/**
- * add_line - add line blank
- *
- * Return: Always 0
- */
-
-void add_line(void)
-{
-	_putchar('\n');
-
 }
