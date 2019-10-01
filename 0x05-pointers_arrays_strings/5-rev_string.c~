@@ -1,0 +1,28 @@
+#include "holberton.h"
+#include <stdio.h>
+
+/**
+ * rev_string - print string
+ * @s: string
+ *
+ * Return: Always 0
+ */
+void rev_string(char *s)
+{
+	int ts;
+	char rev;
+	int cont = 0;
+
+	for (ts = 0; s[ts] != '\0'; ts++)
+		;
+	ts -= 1;
+
+	while (ts < cont)
+	{
+		rev = s[cont];
+		s[cont] = s[ts];
+		s[ts] = rev;
+		ts--;
+		cont++;
+	}
+}

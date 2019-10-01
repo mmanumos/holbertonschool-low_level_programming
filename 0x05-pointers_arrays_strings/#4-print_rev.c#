@@ -1,0 +1,13 @@
+#include "holberton.h"
+
+/**
+ * print_rev - print string
+ * @str: string
+ *
+ * Return: Always 0
+ */
+void print_rev(char *s)
+{
+for
+
+}
