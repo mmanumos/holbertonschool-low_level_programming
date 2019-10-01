@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
  * puts_half - print char
  * @str: string
@@ -13,7 +13,7 @@ void puts_half(char *str)
 
 	for (ts = 0; str[ts] != 0; ts++)
 		;
-
+	printf("%d \n", ts);
 	if (ts % 2 == 0)
 	{
 		limit = (ts / 2);
