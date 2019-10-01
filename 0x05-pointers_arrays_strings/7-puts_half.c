@@ -22,7 +22,7 @@ void puts_half(char *str)
 		limit = (ts - 1) / 2;
 	}
 
-	while (limit <= ts)
+	while (limit < ts)
 	{
 		_putchar(str[limit]);
 		limit++;
