@@ -13,13 +13,14 @@ void puts_half(char *str)
 
 	for (ts = 0; str[ts] != 0; ts++)
 		;
+
 	if (ts % 2 == 0)
 	{
-		limit = ts / 2;
+		limit = (ts / 2);
 	}
 	else
 	{
-		limit = (ts - 1) / 2;
+		limit = (ts + 1) / 2;
 	}
 
 	while (limit < ts)
