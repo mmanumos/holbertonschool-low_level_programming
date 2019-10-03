@@ -3,9 +3,9 @@
 
 /**
  * _strcmp - appends string to other string
- * @dest: pointed array
- * @src: String to copy
- * @n: chars number
+ * @s1: string 1
+ * @s2: String 2
+ *
  * Return: Return string to pointer
  */
 
