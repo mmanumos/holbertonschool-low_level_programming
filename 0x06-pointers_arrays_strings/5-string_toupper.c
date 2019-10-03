@@ -14,7 +14,7 @@ char *string_toupper(char *cad)
 	for (cont = 0; cad[cont] != '\0'; cont++)
 	{
 		if (cad[cont] >= 97 && cad[cont] <= 122)
-			cad[cont] = cad[cont] - 32;
+			cad[cont] = cad[cont] - ' ';
 	}
 	return (cad);
 }
