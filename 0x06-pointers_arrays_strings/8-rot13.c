@@ -20,6 +20,7 @@ char *rot13(char *s)
 			if (s[cont] == alpha[cont2])
 			{
 				s[cont] = rem[cont2];
+				break;
 			}
 		}
 	}
