@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * leet - replace string for number
+ * rot13 - replace string for number
  * @s: string
  *
  * Return: Return string to pointer
