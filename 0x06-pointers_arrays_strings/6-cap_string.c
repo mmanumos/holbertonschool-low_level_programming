@@ -20,6 +20,10 @@ char *cap_string(char *cad)
 				cad[cont + 1] = cad[cont + 1] - ' ';
 			}
 		}
+		if (cad[0] >= 97 && cad[0] <= 122)
+		{
+			cad[0] -= ' ';
+		}
 	}
 	return (cad);
 }
