@@ -37,7 +37,8 @@ int val_char(char sym)
 	if ((sym == '.') || (sym == '\t') || (sym == '!') ||
 	     (sym == ',') || (sym == '?')  || (sym == '(') ||
 	     (sym == ';') || (sym == '"')  || (sym == ')') ||
-	     (sym == '\n') || (sym == '{') || (sym == '}')
+	     (sym == '\n') || (sym == '{') || (sym == '}') ||
+	     (sym == ' ')
 	   )
 	{
 		return (1);
