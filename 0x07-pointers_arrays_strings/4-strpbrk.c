@@ -8,7 +8,7 @@
  * Return: s
  */
 
-char *_strpbrkw(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 	int count, count2;
 
