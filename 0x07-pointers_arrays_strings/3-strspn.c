@@ -20,9 +20,8 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 		}
 
-		if (!accept[count2])
+		if(!accept[count2])
 			break;
-
 	}
 
 	return (count);
