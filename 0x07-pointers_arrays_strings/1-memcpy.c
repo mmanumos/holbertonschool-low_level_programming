@@ -1,9 +1,9 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * _memset - copy values until limit
- * @s: buffer
- * @b: new value
+ * _memcpy - replace values into dest
+ * @dest: string dest
+ * @src: string with values
  * @n: limit to replace
  *
  * Return: s
