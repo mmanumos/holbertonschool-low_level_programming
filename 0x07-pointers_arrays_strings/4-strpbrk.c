@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * _strpbrkw - count math of prefix of chain
+ * _strpbrk - count math of prefix of chain
  * @s: pointer
  * @accept: character to match
  *
