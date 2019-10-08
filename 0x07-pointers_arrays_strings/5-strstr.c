@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * _strpbrk - count math of prefix of chain
- * @s: pointer
- * @accept: character to match
+ * _strstr - search exactly match
+ * @haystack: string
+ * @needle: substring to search
  *
- * Return: s
+ * Return: always 0
  */
 
 char *_strstr(char *haystack, char *needle)
@@ -13,7 +13,7 @@ char *_strstr(char *haystack, char *needle)
 	int i, j, st;
 
 	i = 0;
-	while (haystack[i] != '\0');
+	while (haystack[i] != '\0')
 	{
 		st = i;
 		j = 0;
