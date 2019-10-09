@@ -1,6 +1,6 @@
 # Project 0x08-recursion
 
-Recursion text here
+Recursion write text here
 
 ## What i learned?
 
