@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
+#include <ctype.h>
 
 /**
  * main - it allows add
@@ -15,20 +16,23 @@
 
 int main(int argc, char *argv[])
 {
-	int add = 0, count = 1;
+	int add = 0, co = 1;
 
-	while (count < argc)
+	while (co < argc)
 	{
-		if (atoi(argv[count]) && atoi(argv[count]) > 0)
+		int co1 = 0;
+		add = add + atoi(argv[co]);
+
+		while (argv[co][co1] != '\0')
 		{
-			add = add + atoi(argv[count]);
-			count++;
+			if (!(isdigit(argv[co][co1])) || atoi(argv[co]) < 1)
+			{
+				printf("Error\n");
+				return (1);
+			}
+			co1++;
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+		co++;
 	}
 
 	printf("%d\n", add);
