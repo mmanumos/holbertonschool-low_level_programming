@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
 	while (count < argc)
 	{
-		if (atoi(argv[count]))
+		if (atoi(argv[count]) && atoi(argv[count]) > 0)
 		{
 			add = add + atoi(argv[count]);
 			count++;
