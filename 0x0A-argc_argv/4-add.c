@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
 	while (co < argc)
 	{
 		int co1 = 0;
+
 		add = add + atoi(argv[co]);
 
 		while (argv[co][co1] != '\0')
