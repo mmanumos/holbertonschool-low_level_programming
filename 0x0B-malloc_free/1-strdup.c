@@ -21,7 +21,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	len = _strlen(str);
+	len = _strlen(str) + 1;
 
 	if (len > 0)
 	{
