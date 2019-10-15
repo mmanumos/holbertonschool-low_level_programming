@@ -27,17 +27,13 @@ char *str_concat(char *s1, char *s2)
 	{
 		char *dest = malloc(sizeof(char) * (size + 1));
 
-		if (dest != NULL)
-		{
-			_strncat(dest, s1, size);
-			_strncat(dest, s2, size);
-			dest += '\0';
-			return (dest);
-		}
-		else
-		{
+		if (dest == NULL)
 			return (NULL);
-		}
+
+		_strncat(dest, s1, len1);
+		_strncat(dest, s2, len2);
+		dest += '\0';
+		return (dest);
 	}
 	else
 	{
@@ -78,22 +74,14 @@ int _strlen(char *s)
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int cont;
-	int cont2;
-	int cont3;
+	int st, count;
 
-	for (cont = 0; dest[cont] != '\0'; cont++)
-		;
+	st = _strlen(dest);
 
-	for (cont2 = 0; src[cont2] != '\0'; cont2++)
-		;
-	if (n > cont2)
-		n = cont2;
-
-	for (cont3 = 0; cont3 < n; cont3++)
+	for (count = 0; count < n && src[count] != '\0'; count++)
 	{
-		dest[cont] = src[cont3];
-		cont++;
+		dest[st + count] = src[count];
 	}
+
 	return (dest);
 }
