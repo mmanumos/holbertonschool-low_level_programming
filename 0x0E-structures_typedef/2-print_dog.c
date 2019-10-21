@@ -3,12 +3,9 @@
 #include <stdio.h>
 
 /**
- * init_dog - initialize the structure
+ * print_dog - print arguments from dog
  *
  * @d: address to my structure
- * @name: given name
- * @age: given age
- * @owner: given owner
  *
  */
 
@@ -21,8 +18,10 @@ void print_dog(struct dog *d)
 	{
 		printf("Name: %s\n", (d->name != NULL) ? d->name : (nil));
 
-		printf("Age: %f\n", (d->age != 0) ? d->age : 0.0);
-
+		if (d->age != 0)
+			printf("Age: %f\n", d->age);
+		else
+			printf("Age: nil\n");
 
 		printf("Owner: %s\n", (d->owner != NULL) ? d->owner : (nil));
 	}
