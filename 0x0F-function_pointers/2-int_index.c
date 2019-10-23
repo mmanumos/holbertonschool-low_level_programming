@@ -18,6 +18,9 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int c1, ret;
 
+	if (cmp == NULL)
+		return (0);
+
 	if (size <= 0)
 		ret = -1;
 
