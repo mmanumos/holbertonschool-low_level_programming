@@ -18,25 +18,17 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int c1, ret;
 
-	if (size > 0)
-	{
-
-
-		for (c1 = 0; c1 < size; c1++)
-		{
-			if (cmp(array[c1]) == 1)
-			{
-				return (c1);
-			}
-		}
-
-		if (c1 == size)
-			ret = -1;
-	}
-	else
-	{
+	if (size <= 0)
 		ret = -1;
+
+	for (c1 = 0; c1 < size; c1++)
+	{
+		if (cmp(array[c1]) == 1)
+			return (c1);
 	}
+
+	if (c1 == size)
+		ret = -1;
 
 	return (ret);
 }
