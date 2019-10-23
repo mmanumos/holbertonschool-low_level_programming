@@ -18,20 +18,21 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int c1, ret;
 
-	if (cmp == NULL)
-		return (0);
-
-	if (size <= 0)
-		ret = -1;
-
-	for (c1 = 0; c1 < size; c1++)
+	if ((cmp != NULL) && (array != NULL) && (size > 0))
 	{
-		if (cmp(array[c1]) == 1)
-			return (c1);
-	}
+		for (c1 = 0; c1 < size; c1++)
+		{
+			if (cmp(array[c1]) == 1)
+				return (c1);
+		}
 
-	if (c1 == size)
+		if (c1 == size)
+			ret = -1;
+	}
+	else
+	{
 		ret = -1;
+	}
 
 	return (ret);
 }
