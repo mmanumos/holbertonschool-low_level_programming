@@ -5,7 +5,7 @@
  * print_name - print string
  * using the given pointer to function
  *
- * @name: String to print
+ * @name:String to print
  * @f: pointer to function
  *
  */
