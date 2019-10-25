@@ -4,7 +4,7 @@
  * print_numbers - return sum of all arguments
  *
  * @separator: undefined numbers of parameters
- * @n: number of elements
+ * @n:number of elements
  *
  * Return: fail-0 success-sum
  */
