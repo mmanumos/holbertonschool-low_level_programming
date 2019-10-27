@@ -81,21 +81,21 @@ void print_s(va_list par)
 void print_all(const char * const format, ...)
 {
 
+	int i, k;
+	va_list par;
+	char *sep;
+
 	op print_a[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_f},
-		{"s", print_s}
+		{"s", print_s},
+		{NULL, NULL}
 	};
-
-
-	va_list par;
-	int i = 0, k;
-
-	char *sep;
 
 	va_start(par, format);
 
+	i = 0;
 	sep = "";
 	while ((format[i] != '\0') && (format))
 	{
