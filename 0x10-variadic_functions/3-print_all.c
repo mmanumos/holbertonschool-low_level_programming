@@ -1,59 +1,6 @@
 #include "variadic_functions.h"
 
 /**
- * print_all - return sum of all arguments
- *
- * @format: undefined numbers of parameters
- *
- * Return: fail-0 success-sum
- */
-
-
-void print_all(const char * const format, ...)
-{
-
-	op print_a[] = {
-		{"c", print_char},
-		{"i", print_int},
-		{"f", print_f},
-		{"s", print_s},
-		{NULL, NULL}
-	};
-
-
-	va_list par;
-	int i = 0, k;
-
-	char *sep;
-
-	va_start(par, format);
-
-	sep = "";
-	while ((format[i] != '\0') && (format))
-	{
-
-		k = 0;
-
-		while (print_a[k].symbol != NULL)
-		{
-			if (*print_a[k].symbol == format[i])
-			{
-				printf("%s", sep);
-				print_a[k].f(par);
-				sep = ", ";
-			}
-			k++;
-		}
-		i++;
-	}
-	printf("\n");
-	va_end(par);
-}
-
-
-
-
-/**
  * print_char - operate the values
  *
  * @par: given argument
@@ -120,4 +67,53 @@ void print_s(va_list par)
 	{
 		printf("(nil)");
 	}
+}
+
+/**
+ * print_all - return sum of all arguments
+ *
+ * @format: undefined numbers of parameters
+ *
+ * Return: fail-0 success-sum
+ */
+
+
+void print_all(const char * const format, ...)
+{
+
+	op print_a[] = {
+		{"c", print_char},
+		{"i", print_int},
+		{"f", print_f},
+		{"s", print_s}
+	};
+
+
+	va_list par;
+	int i = 0, k;
+
+	char *sep;
+
+	va_start(par, format);
+
+	sep = "";
+	while ((format[i] != '\0') && (format))
+	{
+
+		k = 0;
+
+		while (print_a[k].symbol != NULL)
+		{
+			if (*print_a[k].symbol == format[i])
+			{
+				printf("%s", sep);
+				print_a[k].f(par);
+				sep = ", ";
+			}
+			k++;
+		}
+		i++;
+	}
+	printf("\n");
+	va_end(par);
 }
