@@ -18,7 +18,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *temp;
 
 	if (n < 1)
+	{
+		printf("\n");
 		return;
+	}
 
 	va_start(par, n);
 
