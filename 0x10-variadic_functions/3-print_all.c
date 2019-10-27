@@ -100,12 +100,12 @@ void print_all(const char * const format, ...)
 
 	i = 0;
 	sep = "";
-	while ((format[i] != '\0') && (format))
+	while (format[i] && format)
 	{
 
 		k = 0;
 
-		while (print_a[k].symbol != NULL)
+		while (k < 4)
 		{
 			if (*print_a[k].symbol == format[i])
 			{
