@@ -27,6 +27,7 @@ typedef struct op
 	void (*f)();
 } op;
 
+
 void print_char(va_list par);
 void print_int(va_list par);
 void print_f(va_list par);

@@ -6,7 +6,7 @@
  * @separator: undefined numbers of parameters
  * @n:number of elements
  *
- * Return: fail-0 success-sum
+ * Return:fail-0 success-sum
  */
 
 
