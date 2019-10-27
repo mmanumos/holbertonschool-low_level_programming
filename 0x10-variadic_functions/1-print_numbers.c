@@ -30,10 +30,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 		if ((i != n) && (separator != NULL))
 			printf("%s", separator);
-
-		if (i == n)
-			printf("%c", '\n');
 	}
+
+	printf("\n");
 
 	va_end(par);
 }
