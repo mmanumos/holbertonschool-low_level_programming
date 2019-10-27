@@ -34,7 +34,7 @@ void print_all(const char * const format, ...)
 
 		k = 0;
 
-		while (print_a[k] != NULL)
+		while (print_a[k].symbol != NULL)
 		{
 			if (*print_a[k].symbol == format[i])
 			{
