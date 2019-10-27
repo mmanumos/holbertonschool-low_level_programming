@@ -15,6 +15,7 @@ void print_all(const char * const format, ...)
 	op print_a[] = {
 		{"c", print_char},
 		{"i", print_int},
+		{"f", print_f},
 		{"s", print_s},
 		{NULL, NULL}
 	};
@@ -33,7 +34,7 @@ void print_all(const char * const format, ...)
 
 		k = 0;
 
-		while (print_a[k].symbol != NULL)
+		while (print_a[k] != NULL)
 		{
 			if (*print_a[k].symbol == format[i])
 			{
