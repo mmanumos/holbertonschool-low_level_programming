@@ -45,10 +45,11 @@ void print_f(va_list par)
 }
 
 
+
 /**
  * print_s - operate the values
  *
-* @par: given argument
+ * @par: given argument
  *
  * Return: Result of operation
  *
@@ -68,6 +69,8 @@ void print_s(va_list par)
 		printf("(nil)");
 	}
 }
+
+
 
 /**
  * print_all - return sum of all arguments
