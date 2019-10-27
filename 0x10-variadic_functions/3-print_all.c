@@ -83,34 +83,32 @@ void print_s(va_list par)
 
 void print_all(const char * const format, ...)
 {
-
-	int i, k;
-	va_list par;
 	char *sep;
+	va_list par;
 
 	op print_a[] = {
 		{"c", print_char},
 		{"i", print_int},
-		{"f", print_f},
 		{"s", print_s},
+		{"f", print_f},
 		{NULL, NULL}
 	};
 
-	va_start(par, format);
+	int i = 0;
+	int k;
 
-	i = 0;
+	va_start(par, format);
 	sep = "";
-	while (format[i] && format)
+	while (format && format[i])
 	{
 
 		k = 0;
-
 		while (k < 4)
 		{
-			if (*print_a[k].symbol == format[i])
+			if (format[i] ==  *print_a[k].symbol)
 			{
 				printf("%s", sep);
-				print_a[k].f(par);
+				(*print_a[k].f)(par);
 				sep = ", ";
 			}
 			k++;
