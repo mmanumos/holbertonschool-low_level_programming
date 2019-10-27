@@ -60,14 +60,13 @@ void print_s(va_list par)
 	char *temp;
 
 	temp = va_arg(par, char *);
-	if (temp != NULL)
-	{
-		printf("%s", temp);
-	}
-	else
+
+	if (temp == NULL)
 	{
 		printf("(nil)");
+		return;
 	}
+	printf("%s", temp);
 }
 
 
