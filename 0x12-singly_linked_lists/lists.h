@@ -1,6 +1,13 @@
 #ifndef LISTS_H_
 #define LISTS_H_
-int _putchar(char c);
+
+
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
+
+
 
 /**
  * struct list_s - singly linked list
@@ -18,5 +25,9 @@ typedef struct list_s
 	struct list_s *next;
 } list_t;
 
+
+int _putchar(char c);
+size_t print_list(const list_t *h);
+size_t list_len(const list_t *h);
 
 #endif
