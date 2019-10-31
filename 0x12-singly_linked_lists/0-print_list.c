@@ -1,11 +1,12 @@
 #include "lists.h"
 
 /**
- * print_list -
+ * print_list - print structure
+ * with their nodes
  *
- *@h:
+ * @h: pointer to initial structure
  *
- * Return:
+ * Return: counter of nodes
  */
 
 
@@ -13,9 +14,10 @@ size_t print_list(const list_t *h)
 {
 	int i;
 	const list_t *temp = NULL;
-	temp = h;
 
+	temp = h;
 	i = 0;
+
 	while (temp != NULL)
 	{
 		if (temp->str == NULL)
