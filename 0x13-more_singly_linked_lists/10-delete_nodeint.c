@@ -7,7 +7,7 @@
  * @head: head of list
  * @index: position to delete the node
  *
- * Return: The new node
+ * Return:The new node
  *
  */
 
@@ -40,6 +40,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		before = before->next;
 		ln++;
 	}
+
+	if (ln != (index - 1))
+		return (-1);
 
 	temp = before->next;
 	before->next = before->next->next;
