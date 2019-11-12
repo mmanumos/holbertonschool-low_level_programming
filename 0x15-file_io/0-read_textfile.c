@@ -13,7 +13,7 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int st;
+	ssize_t st;
 	int file_read, file_write, file_close;
 	char *file;
 
@@ -33,17 +33,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	file_read = read(st, file, letters);
 
 	if (file_read == -1)
-		return (0);
+		return (-1);
 
 	file_write = write(1, file, file_read);
 
 	if (file_write == -1)
-		return (0);
+		return (-1);
 
 	file_close = close(st);
 
 	if (file_close == -1)
-		return (0);
+		return (-1);
 
 	free(file);
 	return (file_read);
